@@ -68,3 +68,13 @@ def add_demands(data):
     data['demands'] = demands
 
     return data
+
+def add_penalties(data, penalty):
+    num_nodes = len(data['nodes'])
+    penalties = [penalty] * num_nodes  # Initialize all demands to 1
+    penalties[0] = 0
+    penalties[-1] = 0
+
+    data['penalties'] = penalties
+
+    return data

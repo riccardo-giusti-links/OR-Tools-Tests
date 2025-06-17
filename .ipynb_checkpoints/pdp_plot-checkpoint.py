@@ -63,7 +63,7 @@ def __make_text(manager, routing, solution, data):
         leg_distance = routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
         route_distance += leg_distance
 
-        plan_output += f"**{last_node}** \n"
+        plan_output += f"**{last_node}** \n\n"
         plan_output += f"**Distance of the route:** {route_distance}m\n\n"
         output += plan_output
         total_distance += route_distance
